@@ -69,7 +69,7 @@ app.post('/custom', function (req, res) {
   });
 })
 
-app.post('/customBroadcast', function (req, res) {
+app.get('/customBroadcast', function (req, res) {
   const command = req.query.text;
   const user = req.query.user;
 
