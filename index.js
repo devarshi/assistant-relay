@@ -69,7 +69,7 @@ app.post('/custom', function (req, res) {
   });
 })
 
-app.post('/customBroadcast', function (req, res) {
+app.get('/customBroadcast', function (req, res) {
   const command = req.query.text;
   const user = req.query.user;
 
@@ -182,7 +182,7 @@ async.forEachOfLimit(config.users, 1, function(i, k, cb){
 }, function(err){
   if(err) return console.log(err.message);
   console.log(`Assistant Relay is now setup and running for ${users}`)
-  sendTextInput(`broadcast Assistant Relay is now setup and running for ${users}`)
+  //sendTextInput(`broadcast Assistant Relay is now setup and running for ${users}`)
 })
 
 function checkUser(user) {
