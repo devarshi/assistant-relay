@@ -114,7 +114,7 @@ def httpPostJSON(path) {
 	def hostUri = hostAddress
     log.debug "Sending command ${path} to ${hostUri}"
     def result = new physicalgraph.device.HubAction(
-            method: "POST",
+            method: "GET",
             path: path,
             headers: [
                     HOST: hostUri
